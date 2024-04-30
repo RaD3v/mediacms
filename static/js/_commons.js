@@ -24637,7 +24637,7 @@
                             main: r.createElement(d.PopupMain, null, r.createElement(d.NavigationMenuList, {
                                     items: [{
                                             itemType: "open-subpage",
-                                            text: "Remove from playlist",
+                                            text: "Премахни от плейлиста",
                                             icon: "delete",
                                             buttonAttr: {
                                                 className: "change-page",
@@ -25229,7 +25229,7 @@
                             link: e.link
                         }, o(), (t = (0, M.WU)(new Date(e.publish_date)), n = "string" == typeof e.publish_date ? Date.parse(e.publish_date) : Date.parse(new Date(e.publish_date)), r.createElement(y.cU, {
                                     dateTime: n,
-                                    text: "Created " + t
+                                    text: "Създаден " + t
                                 })), r.createElement("a", {
                                 href: e.link,
                                 title: "",
@@ -28843,17 +28843,17 @@
                         return a || (n.addMedia && (e.push({
                                     link: f.user.addMedia,
                                     icon: "video_call",
-                                    text: "Upload media",
+                                    text: "Качи видео",
                                     className: "nav-item-upload-media"
                                 }), c.media && e.push({
                                     link: c.media,
                                     icon: "video_library",
-                                    text: "My media",
+                                    text: "Моите видеа",
                                     className: "nav-item-my-media"
                                 })), n.saveMedia && e.push({
                                 link: c.playlists,
                                 icon: "playlist_play",
-                                text: "My playlists",
+                                text: "Моите плейлисти",
                                 className: "nav-item-my-playlists"
                             })),
                         e.length ? r.createElement(u.NavigationMenuList, {
@@ -28892,19 +28892,19 @@
                         return n.manageMedia && e.push({
                             link: f.manage.media,
                             icon: "miscellaneous_services",
-                            text: "Manage media",
+                            text: "Админ видеа",
                             className: "nav-item-manage-media"
                         }),
                         n.manageUsers && e.push({
                             link: f.manage.users,
                             icon: "miscellaneous_services",
-                            text: "Manage users",
+                            text: "Админ хора",
                             className: "nav-item-manage-users"
                         }),
                         n.manageComments && e.push({
                             link: f.manage.comments,
                             icon: "miscellaneous_services",
-                            text: "Manage comments",
+                            text: "Админ Коментари",
                             className: "nav-item-manage-comments"
                         }),
                         e.length ? r.createElement(u.NavigationMenuList, {
@@ -30410,7 +30410,7 @@
                 title: o().string.isRequired
             },
             w.defaultProps = {
-                title: "Uploads"
+                title: "Качени"
             }
         },
         8204: function (e, t, n) {
@@ -31392,18 +31392,18 @@
                     top: (r = [], s.is.anonymous || (s.can.addMedia && (r.push({
                                     link: a.user.addMedia,
                                     icon: "video_call",
-                                    text: "Upload media",
+                                    text: "Качи видео",
                                     itemAttr: {
                                         className: "visible-only-in-small"
                                     }
                                 }), s.pages.media && r.push({
                                     link: s.pages.media,
                                     icon: "video_library",
-                                    text: "My media"
+                                    text: "Моите видеа"
                                 })), r.push({
                                 link: a.signout,
                                 icon: "exit_to_app",
-                                text: "Sign out"
+                                text: "Изход"
                             })), r),
                     middle: function () {
                         var e = [];
@@ -31411,7 +31411,7 @@
                             itemType: "open-subpage",
                             icon: "brightness_4",
                             iconPos: "left",
-                            text: "Switch theme",
+                            text: "Смени тема",
                             buttonAttr: {
                                 className: "change-page",
                                 "data-page-id": "switch-theme"
@@ -31421,7 +31421,7 @@
                                 itemType: "link",
                                 icon: "login",
                                 iconPos: "left",
-                                text: "Sign in",
+                                text: "Вписване",
                                 link: a.signin,
                                 linkAttr: {
                                     className: u ? "visible-only-in-small" : "visible-only-in-extra-small"
@@ -31430,7 +31430,7 @@
                                 itemType: "link",
                                 icon: "person_add",
                                 iconPos: "left",
-                                text: "Register",
+                                text: "Регистрация",
                                 link: a.register,
                                 linkAttr: {
                                     className: u ? "visible-only-in-small" : "visible-only-in-extra-small"
@@ -31438,11 +31438,11 @@
                             })) : (e.push({
                                 link: a.user.editProfile,
                                 icon: "brush",
-                                text: "Edit profile"
+                                text: "Промени профил"
                             }), s.can.changePassword && e.push({
                                 link: a.changePassword,
                                 icon: "lock",
-                                text: "Change password"
+                                text: "Смени парола"
                             })),
                         e
                     }
@@ -31452,7 +31452,7 @@
                         return s.is.admin && e.push({
                             link: a.admin,
                             icon: "admin_panel_settings",
-                            text: "MediaCMS administration"
+                            text: "RaD3v.Club Админ Панел"
                         }),
                         e
                     }
@@ -34102,27 +34102,23 @@
                     if (g = {
                             latest: {
                                 enabled: !1,
-                                title: "Recent uploads"
-                            },
-                            featured: {
-                                enabled: !1,
-                                title: "Featured"
+                                title: "Скорошни"
                             },
                             recommended: {
                                 enabled: !1,
-                                title: "Recommended"
+                                title: "Препоръчани"
                             },
                             members: {
                                 enabled: !1,
-                                title: "Members"
+                                title: "Общество"
                             },
                             liked: {
                                 enabled: !1,
-                                title: "Liked media"
+                                title: "Харесвани"
                             },
                             history: {
                                 enabled: !1,
-                                title: "History"
+                                title: "История"
                             }
                         }, void 0 !== e)
                         for (var t in g)
@@ -34158,7 +34154,7 @@
                             includeHistory: !1,
                             includeLikedMedia: !1
                         }
-                    }, void 0 !== O && void 0 !== O.sections && (void 0 !== O.sections.latest && "string" == typeof O.sections.latest.title && (E.home.sections.latest.title = O.sections.latest.title.trim()), void 0 !== O.sections.featured && "string" == typeof O.sections.featured.title && (E.home.sections.featured.title = O.sections.featured.title.trim()), void 0 !== O.sections.recommended && "string" == typeof O.sections.recommended.title && (E.home.sections.recommended.title = O.sections.recommended.title.trim())), void 0 !== C && !0 === C.advancedFilters && (E.search.advancedFilters = C.advancedFilters), "" === E.home.sections.latest.title && (E.home.sections.latest.title = void 0 !== j.latest ? j.latest.title : "Latest"), "" === E.home.sections.featured.title && (E.home.sections.featured.title = void 0 !== j.featured ? j.featured.title : "Featured"), "" === E.home.sections.recommended.title && (E.home.sections.recommended.title = void 0 !== j.recommended ? j.recommended.title : "Recommended"), void 0 !== A && (!0 === A.categoriesWithTitle && (E.media.categoriesWithTitle = A.categoriesWithTitle), !0 === A.hideViews && (E.media.displayViews = !1), !0 === A.htmlInDescription && (E.media.htmlInDescription = A.htmlInDescription)), void 0 !== T && (!0 === T.htmlInDescription && (E.profile.htmlInDescription = T.htmlInDescription), !0 === T.includeHistory && (E.profile.includeHistory = T.includeHistory), !0 === T.includeLikedMedia && (E.profile.includeLikedMedia = T.includeLikedMedia)), function (e) {
+                    }, void 0 !== O && void 0 !== O.sections && (void 0 !== O.sections.latest && "string" == typeof O.sections.latest.title && (E.home.sections.latest.title = O.sections.latest.title.trim()), void 0 !== O.sections.featured && "string" == typeof O.sections.featured.title && (E.home.sections.featured.title = O.sections.featured.title.trim()), void 0 !== O.sections.recommended && "string" == typeof O.sections.recommended.title && (E.home.sections.recommended.title = O.sections.recommended.title.trim())), void 0 !== C && !0 === C.advancedFilters && (E.search.advancedFilters = C.advancedFilters), "" === E.home.sections.latest.title && (E.home.sections.latest.title = void 0 !== j.latest ? j.latest.title : "Latest"), "" === E.home.sections.featured.title && (E.home.sections.featured.title = void 0 !== j.featured ? j.featured.title : "Featured"), "" === E.home.sections.recommended.title && (E.home.sections.recommended.title = void 0 !== j.recommended ? j.recommended.title : "Препоръчани"), void 0 !== A && (!0 === A.categoriesWithTitle && (E.media.categoriesWithTitle = A.categoriesWithTitle), !0 === A.hideViews && (E.media.displayViews = !1), !0 === A.htmlInDescription && (E.media.htmlInDescription = A.htmlInDescription)), void 0 !== T && (!0 === T.htmlInDescription && (E.profile.htmlInDescription = T.htmlInDescription), !0 === T.includeHistory && (E.profile.includeHistory = T.includeHistory), !0 === T.includeLikedMedia && (E.profile.includeLikedMedia = T.includeLikedMedia)), function (e) {
                     for (var t in f = {}, e)
                         f[t] = e[t]
                 }
@@ -34254,11 +34250,11 @@
                     if (w = {
                             tags: {
                                 enabled: !1,
-                                title: "Tags"
+                                title: "Тагове"
                             },
                             categories: {
                                 enabled: !1,
-                                title: "Categories"
+                                title: "Категории"
                             }
                         }, void 0 !== e)
                         for (var t in w)
