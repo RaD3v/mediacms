@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block headtitle %}Contact us - {{PORTAL_NAME}}{% endblock headtitle %}
+{% block headtitle %}Контакт - {{PORTAL_NAME}}{% endblock headtitle %}
 
 {% block headermeta %}
 
@@ -44,11 +44,11 @@
         {% if success_msg %}
             <h1>{{success_msg}}<h1>
         {% else %}
-            <h1>Contact us</h1>
+            <h1>Свържи се с администратора</h1>
             <form enctype="multipart/form-data" action="" method="post" class="post-form">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="primaryAction" type="submit">Submit</button>
+                <button class="primaryAction" type="submit">Изпрати</button>
             </form>
         {% endif %}
     </div>
