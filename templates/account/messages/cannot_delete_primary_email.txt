@@ -1,2 +1,2 @@
 {% load i18n %}
-{% blocktrans %}Не можете да премахнете своя основен имейл адрес ({{email}}).{% endblocktrans %}
+{% blocktrans %}Не можете да премахнете своя основен e-mail адрес ({{email}}).{% endblocktrans %}
