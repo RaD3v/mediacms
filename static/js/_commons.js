@@ -29844,7 +29844,7 @@
                 r.createElement("a", {
                     href: t,
                     className: "edit-channel",
-                    title: "Add banner"
+                    title: "Добави тапет"
                 }, "ADD BANNER")
             }
             function A(e) {
@@ -29853,7 +29853,7 @@
                 r.createElement("a", {
                     href: t,
                     className: "edit-channel",
-                    title: "Edit banner"
+                    title: "Промени тапет"
                 }, "EDIT BANNER")
             }
             function T(e) {
@@ -29862,7 +29862,7 @@
                 r.createElement("a", {
                     href: t,
                     className: "edit-profile",
-                    title: "Edit profile"
+                    title: "Промяни профил"
                 }, "EDIT PROFILE")
             }
             function j(e) {
@@ -29942,7 +29942,7 @@
                             }, r.createElement("button", {
                                     className: "delete-profile",
                                     title: ""
-                                }, "REMOVE PROFILE")), r.createElement(i, {
+                                }, "ПРЕМАХНИ ПРОФИЛ")), r.createElement(i, {
                                 contentRef: n
                             }, r.createElement(c.PopupMain, null, r.createElement("div", {
                                         className: "popup-message"
@@ -30247,7 +30247,7 @@
                                 className: "start-uploading"
                             }, "Start uploading media and sharing your work. Media that you upload will show up here."), r.createElement("a", {
                                 href: t.user.addMedia,
-                                title: "Upload media",
+                                title: "Качи Видео",
                                 className: "button-link"
                             }, r.createElement("i", {
                                     className: "material-icons",
@@ -34114,11 +34114,11 @@
                             },
                             liked: {
                                 enabled: !1,
-                                title: "Харесвани"
+                                title: "Най-харесвани"
                             },
                             history: {
                                 enabled: !1,
-                                title: "История"
+                                title: "Последно Гледани"
                             }
                         }, void 0 !== e)
                         for (var t in g)
