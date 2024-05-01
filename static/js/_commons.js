@@ -28892,13 +28892,13 @@
                         return n.manageMedia && e.push({
                             link: f.manage.media,
                             icon: "miscellaneous_services",
-                            text: "Админ видеа",
+                            text: "Админ Медиа",
                             className: "nav-item-manage-media"
                         }),
                         n.manageUsers && e.push({
                             link: f.manage.users,
                             icon: "miscellaneous_services",
-                            text: "Админ хора",
+                            text: "Админ Потребители",
                             className: "nav-item-manage-users"
                         }),
                         n.manageComments && e.push({
