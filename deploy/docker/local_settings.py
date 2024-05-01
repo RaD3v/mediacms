@@ -1,8 +1,40 @@
-FRONTEND_HOST = 'http://localhost'
-PORTAL_NAME = 'MediaCMS'
+FRONTEND_HOST = 'https://RaD3v.Club/'
+PORTAL_NAME = 'RaD3v.Club'
+PORTAL_DESCRIPTION = "RaD3v.Club Videos"
+LANGUAGE_CODE = "en-us"
 SECRET_KEY = 'ma!s3^b-cw!f#7s6s0m3*jx77a@riw(7701**(r=ww%w!2+yk2'
 POSTGRES_HOST = 'db'
 REDIS_LOCATION = "redis://redis:6379/1"
+CAN_ADD_MEDIA = "all"
+LOGIN_ALLOWED = True
+REGISTER_ALLOWED = False
+CAN_REPORT_MEDIA = False
+USERS_CAN_SELF_REGISTER = False
+GLOBAL_LOGIN_REQUIRED = True
+UPLOAD_MAX_SIZE = 1600 * 2048 * 2000 * 10
+
+DEFAULT_THEME = "dark"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'admin@rad3v.club'
+EMAIL_HOST_PASSWORD = 'fzokdzcnmqsfqtjg'
+EMAIL_HOST_USER = 'rad3v.club@gmail.com'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+ADMIN_EMAIL_LIST = ['rad3v.bg@gmail.com']
+
+USERS_NOTIFICATIONS = {
+    'MEDIA_ADDED': True,
+}
+
+ADMINS_NOTIFICATIONS = {
+    'NEW_USER': True,
+    'MEDIA_ADDED': True,
+    'MEDIA_REPORTED': True,
+}
 
 DATABASES = {
     "default": {
