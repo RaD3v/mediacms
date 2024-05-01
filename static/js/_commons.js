@@ -25899,7 +25899,7 @@
                 return t && window.MediaCMS.site.devEnv && (t = "/edit-media.html"),
                 t ? r.createElement("a", {
                     href: t,
-                    title: "Edit media",
+                    title: "Редактирай",
                     className: "item-edit-link"
                 }, "EDIT MEDIA") : null
             }
@@ -26583,7 +26583,7 @@
                     }, "|"), r.createElement(o, {
                         contentRef: n
                     }, r.createElement("button", {
-                            title: "Delete comment"
+                            title: "Изтрий коментар"
                         }, "Delete")), r.createElement(i, {
                         contentRef: n,
                         showCallback: function () {
@@ -28500,7 +28500,7 @@
                 }, r.createElement(u.CircleIconButton, {
                         type: "link",
                         href: n.user.addMedia,
-                        title: "Upload media"
+                        title: "Качи видео"
                     }, r.createElement(u.MaterialIcon, {
                             type: "video_call"
                         }), r.createElement("span", {
@@ -28517,7 +28517,7 @@
                         href: n,
                         rel: "noffolow",
                         className: "button-link sign-in" + (i ? " hidden-only-in-small" : " hidden-only-in-extra-small"),
-                        title: "Sign in"
+                        title: "Вход"
                     }, "Sign in")) : null
             }
             function E(e) {
@@ -28529,7 +28529,7 @@
                 }, r.createElement("a", {
                         href: n,
                         className: "button-link register-link" + (i ? " hidden-only-in-small" : " hidden-only-in-extra-small"),
-                        title: "Register"
+                        title: "Регистрация"
                     }, "Register")) : null
             }
             function S(e) {
