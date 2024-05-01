@@ -36378,7 +36378,7 @@
             t.MediaListHeader = void 0;
             var i = r(n(5466));
             t.MediaListHeader = function (e) {
-                var t = e.viewAllText || "VIEW ALL";
+                var t = e.viewAllText || "ВИЖ ВСИЧКИ";
                 return i.default.createElement("div", {
                     className: (e.className ? e.className + " " : "") + "media-list-header",
                     style: e.style
