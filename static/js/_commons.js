@@ -20334,52 +20334,50 @@
                 return (e || []).filter(Boolean)
             }
         },
-        3064: function (e, t, n) {
-            "use strict";
-            n.d(t, {
-                WU: function () {
-                    return u
-                }
-            });
-            var r = ["секунда", "минута", "час", "ден", "седмица", "месец", "година"],
-            i = ["秒", "分钟", "小时", "天", "周", "个月", "年"],
-            o = {},
-            a = function (e, t) {
-                o[e] = t
-            },
-            l = [60, 60, 24, 7, 365 / 7 / 12, 12];
-            function s(e) {
-                return e instanceof Date ? e : !isNaN(e) || /^\d+$/.test(e) ? new Date(parseInt(e)) : (e = (e || "").trim().replace(/\.\d+/, "").replace(/-/, "/").replace(/-/, "/").replace(/(\d)T(\d)/, "$1 $2").replace(/Z/, " UTC").replace(/([+-]\d\d):?(\d\d)/, " $1$2"), new Date(e))
-            }
-            var u = function (e, t, n) {
-                return function (e, t) {
-                    for (var n = e < 0 ? 1 : 0, r = e = Math.abs(e), i = 0; e >= l[i] && i < l.length; i++)
-                        e /= l[i];
-                    return (e = Math.floor(e)) > (0 == (i *= 2) ? 9 : 1) && (i += 1),
-                    t(e, i, r)[n].replace("%s", e.toString())
-                }
-                (function (e, t) {
-                    return ( + (t ? s(t) : new Date) - +s(e)) / 1e3
-                }
-                    (e, n && n.relativeDate), function (e) {
-                    return o[e] || o.en_US
-                }
-                    (t))
-            };
-            a("en_US", (function (e, t) {
-                    if (0 === t)
-                        return ["току-що", "сега"];
-                    var n = r[Math.floor(t / 2)];
-                    return e > 1 && (n += "а"),
-                    ["преди " + e + " " + n, "in " + e + " " + n]
-                })),
-            a("zh_CN", (function (e, t) {
-                    if (0 === t)
-                        return ["刚刚", "片刻后"];
-                    var n = i[~~(t / 2)];
-                    return [e + " " + n + "前", e + " " + n + "后"]
-                }))
+       
+
+ 3064:function (e, t, n) {
+    "use strict";
+    n.d(t, {
+        WU: function () {
+            return u
+        }
+    });
+    var r = ["секунда", "минута", "час", "ден", "седмица", "месец", "година"],
+        o = {},
+        a = function (e, t) {
+            o[e] = t
         },
+        l = [60, 60, 24, 7, 365 / 7 / 12, 12];
+
+    function s(e) {
+        return e instanceof Date ? e : !isNaN(e) || /^\d+$/.test(e) ? new Date(parseInt(e)) : (e = (e || "").trim().replace(/\.\d+/, "").replace(/-/, "/").replace(/-/, "/").replace(/(\d)T(\d)/, "$1 $2").replace(/Z/, " UTC").replace(/([+-]\d\d):?(\d\d)/, " $1$2"), new Date(e))
+    }
+    var u = function (e, t, n) {
+        return function (e, t) {
+            for (var n = e < 0 ? 1 : 0, r = e = Math.abs(e), i = 0; e >= l[i] && i < l.length; i++)
+                e /= l[i];
+            return (e = Math.floor(e)) > (0 == (i *= 2) ? 9 : 1) && (i += 1),
+            t(e, i, r)[n].replace("%s", e.toString())
+        }
+        (function (e, t) {
+            return ( + (t ? s(t) : new Date) - +s(e)) / 1e3
+        }
+            (e, n && n.relativeDate), function (e) {
+            return o[e] || o.en_US
+        }
+            (t))
+    };
+    a("bg_BG", (function (e, t) {
+            if (0 === t)
+                return ["току-що", "сега"];
+            var n = r[Math.floor(t / 2)];
+            return e > 1 && (n += "и"),
+            ["преди " + e + " " + n, "след " + e + " " + n]
+        }))
+}
+
+
         137: function (e, t, n) {
             "use strict";
             var r = n(8461),
