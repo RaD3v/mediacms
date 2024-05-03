@@ -20341,7 +20341,7 @@
                     return u
                 }
             });
-            var r = ["second", "minute", "hour", "day", "week", "month", "year"],
+            var r = ["секунда", "минута", "час", "ден", "седмица", "месец", "година"],
             i = ["秒", "分钟", "小时", "天", "周", "个月", "年"],
             o = {},
             a = function (e, t) {
@@ -20368,10 +20368,10 @@
             };
             a("en_US", (function (e, t) {
                     if (0 === t)
-                        return ["just now", "right now"];
+                        return ["току-що", "сега"];
                     var n = r[Math.floor(t / 2)];
-                    return e > 1 && (n += "s"),
-                    [e + " " + n + " ago", "in " + e + " " + n]
+                    return e > 1 && (n += "а"),
+                    ["преди " + e + " " + n, "in " + e + " " + n]
                 })),
             a("zh_CN", (function (e, t) {
                     if (0 === t)
@@ -24637,7 +24637,7 @@
                             main: r.createElement(d.PopupMain, null, r.createElement(d.NavigationMenuList, {
                                     items: [{
                                             itemType: "open-subpage",
-                                            text: "Премахни от плейлиста",
+                                            text: "Премахни от плейлистата",
                                             icon: "delete",
                                             buttonAttr: {
                                                 className: "change-page",
@@ -24650,16 +24650,16 @@
                                     className: "popup-message"
                                 }, r.createElement("span", {
                                         className: "popup-message-title"
-                                    }, "Media playlist removal"), r.createElement("span", {
+                                    }, "Видео плейлист премахване"), r.createElement("span", {
                                         className: "popup-message-main"
-                                    }, "You're willing to remove media from playlist permanently?")), r.createElement("hr", null), r.createElement("span", {
+                                    }, "Сигурен ли си, че искаш да премахнеш видеото от плейлистата?")), r.createElement("hr", null), r.createElement("span", {
                                     className: "popup-message-bottom"
                                 }, r.createElement("button", {
                                         className: "button-link cancel-playlist-removal",
                                         onClick: function () {
                                             n.current.toggle()
                                         }
-                                    }, "CANCEL"), r.createElement("button", {
+                                    }, "ОТМЕНИ"), r.createElement("button", {
                                         className: "button-link proceed-playlist-removal",
                                         onClick: function () {
                                             (0, u.putRequest)(o.PageStore.get("api-playlists") + "/" + e.playlist_id, {
@@ -24671,21 +24671,21 @@
                                                 }
                                             }, !1, y, g)
                                         }
-                                    }, "PROCEED")))
+                                    }, "ПРОДЪЛЖИ")))
                         }), 1)[0];
                 function y() {
                     n.current.tryToHide();
                     var t = e.media_id,
                     r = e.playlist_id;
                     setTimeout((function () {
-                            f.PageActions.addNotification("Media removed from playlist", "mediaPlaylistRemove"),
+                            f.PageActions.addNotification("Видеоти е премахнато от плейлистата", "mediaPlaylistRemove"),
                             f.PlaylistPageActions.removedMediaFromPlaylist(t, r)
                         }), 100)
                 }
                 function g() {
                     n.current.tryToHide(),
                     setTimeout((function () {
-                            f.PageActions.addNotification("Media removal from playlist failed", "mediaPlaylistRemoveFail")
+                            f.PageActions.addNotification("Премахването на видеото от плейлистата е неуспешно!", "mediaPlaylistRemoveFail")
                         }), 100)
                 }
                 return r.createElement("div", {
@@ -25229,12 +25229,12 @@
                             link: e.link
                         }, o(), (t = (0, M.WU)(new Date(e.publish_date)), n = "string" == typeof e.publish_date ? Date.parse(e.publish_date) : Date.parse(new Date(e.publish_date)), r.createElement(y.cU, {
                                     dateTime: n,
-                                    text: "Създаден " + t
+                                    text: "Създадена " + t
                                 })), r.createElement("a", {
                                 href: e.link,
                                 title: "",
                                 className: "view-full-playlist"
-                            }, "VIEW FULL PLAYLIST"))))
+                            }, "ВИЖ ЦЯЛАТА ПЛЕЙЛИСТА"))))
             }
             function F(e, t) {
                 var n = Object.keys(e);
@@ -25901,7 +25901,7 @@
                     href: t,
                     title: "Редактирай",
                     className: "item-edit-link"
-                }, "EDIT MEDIA") : null
+                }, "РЕДАКТИРАЙ ВИДЕО") : null
             }
             function C(e) {
                 var t = {
@@ -25952,7 +25952,7 @@
             function j(e) {
                 return r.createElement("span", {
                     className: "item-views"
-                }, (0, o.formatViewsNumber)(e.views) + " " + (1 >= e.views ? "view" : "views"))
+                }, (0, o.formatViewsNumber)(e.views) + " " + (1 >= e.views ? "гледанe" : "гледания"))
             }
             function I(e) {
                 return r.createElement("span", {
@@ -26606,13 +26606,13 @@
                                         n.current.tryToHide(),
                                         "function" == typeof e.onCancel && e.onCancel()
                                     }
-                                }, "CANCEL"), r.createElement("button", {
+                                }, "НЕ"), r.createElement("button", {
                                     className: "button-link proceed-profile-removal",
                                     onClick: function () {
                                         n.current.tryToHide(),
                                         "function" == typeof e.onProceed && e.onProceed()
                                     }
-                                }, "PROCEED")))))
+                                }, "ДА")))))
             }
             function I(e) {
                 var t = (0, r.useRef)(null),
@@ -28843,17 +28843,17 @@
                         return a || (n.addMedia && (e.push({
                                     link: f.user.addMedia,
                                     icon: "video_call",
-                                    text: "Качи видео",
+                                    text: "Качи Видео",
                                     className: "nav-item-upload-media"
                                 }), c.media && e.push({
                                     link: c.media,
                                     icon: "video_library",
-                                    text: "Моите видеа",
+                                    text: "Моите Видеа",
                                     className: "nav-item-my-media"
                                 })), n.saveMedia && e.push({
                                 link: c.playlists,
                                 icon: "playlist_play",
-                                text: "Моите плейлисти",
+                                text: "Моите Плейлисти",
                                 className: "nav-item-my-playlists"
                             })),
                         e.length ? r.createElement(u.NavigationMenuList, {
@@ -29845,7 +29845,7 @@
                     href: t,
                     className: "edit-channel",
                     title: "Добави тапет"
-                }, "ADD BANNER")
+                }, "ДОБАВИ ТАПЕТ")
             }
             function A(e) {
                 var t = e.link;
@@ -29854,7 +29854,7 @@
                     href: t,
                     className: "edit-channel",
                     title: "Промени тапет"
-                }, "EDIT BANNER")
+                }, "ПРОМЕНИ ТАПЕТ")
             }
             function T(e) {
                 var t = e.link;
@@ -29862,8 +29862,8 @@
                 r.createElement("a", {
                     href: t,
                     className: "edit-profile",
-                    title: "Промяни профил"
-                }, "EDIT PROFILE")
+                    title: "Промени профил"
+                }, "ПРОМЕНИ ПРОФИЛ")
             }
             function j(e) {
                 var t = h((0, a.usePopup)(), 3),
@@ -29891,7 +29891,7 @@
                 }
                 function O(e) {
                     setTimeout((function () {
-                            u.PageActions.addNotification("Profile removed. Redirecting...", "profileDelete"),
+                            u.PageActions.addNotification("Профилът е изтрит! Пренасочване...", "profileDelete"),
                             setTimeout((function () {
                                     window.location.href = l.SiteContext._currentValue.url
                                 }), 2e3)
@@ -29900,7 +29900,7 @@
                 }
                 function _(e) {
                     setTimeout((function () {
-                            u.PageActions.addNotification("Profile removal failed", "profileDeleteFail")
+                            u.PageActions.addNotification("Изтриването на профила е неуспешно!", "profileDeleteFail")
                         }), 100),
                     void 0 !== e && d.info('Profile "' + e + '" removal failed')
                 }
@@ -29942,28 +29942,28 @@
                             }, r.createElement("button", {
                                     className: "delete-profile",
                                     title: ""
-                                }, "ПРЕМАХНИ ПРОФИЛ")), r.createElement(i, {
+                                }, "ИЗТРИЙ ПРОФИЛ")), r.createElement(i, {
                                 contentRef: n
                             }, r.createElement(c.PopupMain, null, r.createElement("div", {
                                         className: "popup-message"
                                     }, r.createElement("span", {
                                             className: "popup-message-title"
-                                        }, "Profile removal"), r.createElement("span", {
+                                        }, "Изтриване на профил"), r.createElement("span", {
                                             className: "popup-message-main"
-                                        }, "You're willing to remove profile permanently?")), r.createElement("hr", null), r.createElement("span", {
+                                        }, "Сигурен ли си, че искаш да изтриеш профила си завинаги!?")), r.createElement("hr", null), r.createElement("span", {
                                         className: "popup-message-bottom"
                                     }, r.createElement("button", {
                                             className: "button-link cancel-profile-removal",
                                             onClick: function () {
                                                 n.current.toggle()
                                             }
-                                        }, "CANCEL"), r.createElement("button", {
+                                        }, "ОТМЕНИ"), r.createElement("button", {
                                             className: "button-link proceed-profile-removal",
                                             onClick: function () {
                                                 u.ProfilePageActions.remove_profile(),
                                                 n.current.toggle()
                                             }
-                                        }, "PROCEED"))))) : null, E ? e.author.banner_thumbnail_url ? r.createElement(A, {
+                                        }, "ПРОДЪЛЖИ"))))) : null, E ? e.author.banner_thumbnail_url ? r.createElement(A, {
                             link: s.ProfilePageStore.get("author-data").default_channel_edit_url
                         }) : r.createElement(x, {
                             link: s.ProfilePageStore.get("author-data").default_channel_edit_url
@@ -30998,9 +30998,9 @@
                             value: function () {
                                 if (void 0 === o[this.id].ariaLabel) {
                                     var e = [];
-                                    0 < o[this.id].hours && e.push(o[this.id].hours + " hours"),
-                                    0 < o[this.id].minutes && e.push(o[this.id].minutes + " minutes"),
-                                    0 < o[this.id].seconds && e.push(o[this.id].seconds + " seconds"),
+                                    0 < o[this.id].hours && e.push(o[this.id].hours + " часа"),
+                                    0 < o[this.id].minutes && e.push(o[this.id].minutes + " минути"),
+                                    0 < o[this.id].seconds && e.push(o[this.id].seconds + " секунди"),
                                     o[this.id].ariaLabel = e.join(", ")
                                 }
                                 return o[this.id].ariaLabel
@@ -31008,7 +31008,7 @@
                         }, {
                             key: "ISO8601",
                             value: function () {
-                                return "P0Y0M0DT" + o[this.id].hours + "H" + o[this.id].minutes + "M" + o[this.id].seconds + "S"
+                                return "P0Y0M0DT" + o[this.id].hours + "Ч" + o[this.id].minutes + "M" + o[this.id].seconds + "С"
                             }
                         }
                     ]) && i(t.prototype, n),
@@ -31218,7 +31218,7 @@
                                 o.update(e[c].duration) , t[c] = document.createElement("div"), t[c].setAttribute("class", "more-media-item before-more-media-item-load"), t[c].setAttribute("style", "--n: " + c), t[c].innerHTML = '<a href="' + e[c].url + '" title="' + e[c].title + '"' + (i ? 'target="_blank"' : "") + ">" + (s = e[c].thumbnail_url, u = o.toString(), s ? '<span class="more-media-item-thumb" style="background-image:url(\'' + s + "');\">" + function (e) {
                                         return '<span class="more-media-duration"><span>' + e + "</span></span>"
                                     }
-                                            (u) + "</span>" : "") + a(e[c].title, e[c].author_name, (0, r.formatViewsNumber)(e[c].views) + " " + (1 >= e[c].views ? "view" : "views"), l) + "</a>", n.appendChild(t[c]), c += 1
+                                            (u) + "</span>" : "") + a(e[c].title, e[c].author_name, (0, r.formatViewsNumber)(e[c].views) + " " + (1 >= e[c].views ? "гледане" : "гледания"), l) + "</a>", n.appendChild(t[c]), c += 1
                             }
                                 (e, g.items, g.contentInner, t, n)), v.displayType) {
                         case "inline":
@@ -31350,7 +31350,7 @@
         },
         3277: function (e, t) {
             "use strict";
-            t.Z = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            t.Z = ["Януари", "Февруари", "Март", "Април", "Май", "Юни", "Юли", "Август", "Септември", "Октомври", "Ноември", "Декември"]
         },
         1853: function (e, t, n) {
             "use strict";
@@ -31421,7 +31421,7 @@
                                 itemType: "link",
                                 icon: "login",
                                 iconPos: "left",
-                                text: "Вписване",
+                                text: "Вход",
                                 link: a.signin,
                                 linkAttr: {
                                     className: u ? "visible-only-in-small" : "visible-only-in-extra-small"
@@ -31438,11 +31438,11 @@
                             })) : (e.push({
                                 link: a.user.editProfile,
                                 icon: "brush",
-                                text: "Промени профил"
+                                text: "Редактирай профил"
                             }), s.can.changePassword && e.push({
                                 link: a.changePassword,
                                 icon: "lock",
-                                text: "Смени парола"
+                                text: "Смяна на парола"
                             })),
                         e
                     }
@@ -32086,7 +32086,7 @@
                 o = e.getHours(),
                 a = e.getMinutes(),
                 l = e.getSeconds(),
-                s = n + " " + t + ", " + i;
+                s = t + " " + n + ", " + i;
                 return s += " " + (o < 10 ? "0" : "") + o,
                 (s += ":" + (a < 10 ? "0" : "") + a) + ":" + (l < 10 ? "0" : "") + l
             }
@@ -34110,7 +34110,7 @@
                             },
                             members: {
                                 enabled: !1,
-                                title: "Общество"
+                                title: "Фамилията"
                             },
                             liked: {
                                 enabled: !1,
@@ -34154,7 +34154,7 @@
                             includeHistory: !1,
                             includeLikedMedia: !1
                         }
-                    }, void 0 !== O && void 0 !== O.sections && (void 0 !== O.sections.latest && "string" == typeof O.sections.latest.title && (E.home.sections.latest.title = O.sections.latest.title.trim()), void 0 !== O.sections.featured && "string" == typeof O.sections.featured.title && (E.home.sections.featured.title = O.sections.featured.title.trim()), void 0 !== O.sections.recommended && "string" == typeof O.sections.recommended.title && (E.home.sections.recommended.title = O.sections.recommended.title.trim())), void 0 !== C && !0 === C.advancedFilters && (E.search.advancedFilters = C.advancedFilters), "" === E.home.sections.latest.title && (E.home.sections.latest.title = void 0 !== j.latest ? j.latest.title : "Latest"), "" === E.home.sections.featured.title && (E.home.sections.featured.title = void 0 !== j.featured ? j.featured.title : "Featured"), "" === E.home.sections.recommended.title && (E.home.sections.recommended.title = void 0 !== j.recommended ? j.recommended.title : "Препоръчани"), void 0 !== A && (!0 === A.categoriesWithTitle && (E.media.categoriesWithTitle = A.categoriesWithTitle), !0 === A.hideViews && (E.media.displayViews = !1), !0 === A.htmlInDescription && (E.media.htmlInDescription = A.htmlInDescription)), void 0 !== T && (!0 === T.htmlInDescription && (E.profile.htmlInDescription = T.htmlInDescription), !0 === T.includeHistory && (E.profile.includeHistory = T.includeHistory), !0 === T.includeLikedMedia && (E.profile.includeLikedMedia = T.includeLikedMedia)), function (e) {
+                    }, void 0 !== O && void 0 !== O.sections && (void 0 !== O.sections.latest && "string" == typeof O.sections.latest.title && (E.home.sections.latest.title = O.sections.latest.title.trim()), void 0 !== O.sections.featured && "string" == typeof O.sections.featured.title && (E.home.sections.featured.title = O.sections.featured.title.trim()), void 0 !== O.sections.recommended && "string" == typeof O.sections.recommended.title && (E.home.sections.recommended.title = O.sections.recommended.title.trim())), void 0 !== C && !0 === C.advancedFilters && (E.search.advancedFilters = C.advancedFilters), "" === E.home.sections.latest.title && (E.home.sections.latest.title = void 0 !== j.latest ? j.latest.title : "Последно качени"), "" === E.home.sections.featured.title && (E.home.sections.featured.title = void 0 !== j.featured ? j.featured.title : "Featured"), "" === E.home.sections.recommended.title && (E.home.sections.recommended.title = void 0 !== j.recommended ? j.recommended.title : "Препоръчани"), void 0 !== A && (!0 === A.categoriesWithTitle && (E.media.categoriesWithTitle = A.categoriesWithTitle), !0 === A.hideViews && (E.media.displayViews = !1), !0 === A.htmlInDescription && (E.media.htmlInDescription = A.htmlInDescription)), void 0 !== T && (!0 === T.htmlInDescription && (E.profile.htmlInDescription = T.htmlInDescription), !0 === T.includeHistory && (E.profile.includeHistory = T.includeHistory), !0 === T.includeLikedMedia && (E.profile.includeLikedMedia = T.includeLikedMedia)), function (e) {
                     for (var t in f = {}, e)
                         f[t] = e[t]
                 }
@@ -35584,7 +35584,7 @@
                                 case "saved-playlist":
                                     return this.data.savedPlaylist;
                                 case "date-label":
-                                    return m[this.id].data && m[this.id].data.add_date ? (this.data.publishDateLabel = this.data.publishDateLabel || "Created on " + (0, a.publishedOnDate)(new Date(m[this.id].data.add_date), 3), this.data.publishDateLabel) : null
+                                    return m[this.id].data && m[this.id].data.add_date ? (this.data.publishDateLabel = this.data.publishDateLabel || "Добавен на " + (0, a.publishedOnDate)(new Date(m[this.id].data.add_date), 3), this.data.publishDateLabel) : null
                                 }
                                 return null
                             }
