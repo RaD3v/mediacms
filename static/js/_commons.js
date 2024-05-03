@@ -27763,7 +27763,7 @@
                             return l ? 1 > l.totalPages() || l.loadedAllItems() ? null : r.createElement("button", {
                                 className: "load-more",
                                 onClick: y
-                            }, "SHOW MORE") : null
+                            }, "ПОКАЖИ ОЩЕ") : null
                         }
                     ]
                 }
@@ -32422,7 +32422,7 @@
             var r = n(3277);
             function i(e, t) {
                 if (e instanceof Date)
-                    switch (t = 0 < (t = 0 + t) ? t : 1) {
+                    switch (t = 0 < (t = 0 + t) ? t : 3) {
                     case 1:
                         return r.Z[e.getMonth()].substring(0, 3) + " " + e.getDate() + ", " + e.getFullYear();
                     case 2:
@@ -33484,7 +33484,7 @@
                         return f ? 1 > f.totalPages() || f.loadedAllItems() ? null : r.createElement("button", {
                             className: "load-more",
                             onClick: g
-                        }, "SHOW MORE") : null
+                        }, "ПОКАЖИ ОЩЕ") : null
                     }
                 ]
             }
