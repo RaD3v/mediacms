@@ -20367,11 +20367,21 @@
                     (t))
             };
             a("en_US", (function (e, t) {
-                    if (0 === t)
+                    if (0 === t) {
                         return ["току-що", "сега"];
+                    } else {
                     var n = r[Math.floor(t / 2)];
-                    return e > 1 && (n += "а"),
-                    ["преди " + e + " " + n, "in " + e + " " + n]
+                    if (e > 1) {
+                        if (n === 'секунда') n = 'секунди';
+                        else if (n === 'минута') n = 'минути';
+                        else if (n === 'час') n = 'часa';
+                        else if (n === 'ден') n = 'дни';
+                        else if (n === 'седмица') n = 'седмици';
+                        else if (n === 'месец') n = 'месецa';
+                        else if (n === 'година') n = 'години';     
+                    }
+                    return ["преди " + e + " " + n, "след " + e + " " + n];
+                    }
                 })),
             a("zh_CN", (function (e, t) {
                     if (0 === t)
