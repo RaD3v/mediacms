@@ -1148,9 +1148,9 @@
                     r[n] = e[n];
                 return r
             }
-            var J = "comment",
-            K = "Comment",
-            X = "SUBMIT";
+            var J = "коментара",
+            K = "коментар",
+            X = "КОМЕНТИРАЙ";
             function ee(e) {
                 var t = (0, a.useRef)(null),
                 n = Y((0, a.useState)(""), 2),
@@ -1219,10 +1219,10 @@
                                 href: w,
                                 rel: "noffolow",
                                 className: "form-textarea-wrap",
-                                title: "Add a comment..."
+                                title: "Добави коментар..."
                             }, a.createElement("span", {
                                     className: "form-textarea"
-                                }, "Add a comment...")), a.createElement("div", {
+                                }, "Добави коментар...")), a.createElement("div", {
                                 className: "form-buttons"
                             }, a.createElement("a", {
                                     href: w,
@@ -1240,7 +1240,7 @@
                                     inputRef: t,
                                     className: "form-textarea",
                                     rows: "1",
-                                    placeholder: "Add a comment...",
+                                    placeholder: "Добави коментар...",
                                     value: r,
                                     onChange: function (e, n, r, a) {
                                         t.current.style.height = "",
@@ -1260,7 +1260,7 @@
                                     ref: t,
                                     className: "form-textarea",
                                     rows: "1",
-                                    placeholder: "Add a comment...",
+                                    placeholder: "Добави коментар...",
                                     value: r,
                                     onChange: function (e) {
                                         t.current.style.height = "";
@@ -1304,28 +1304,28 @@
                         className: "comment-action remove-comment"
                     }, a.createElement(o, {
                             contentRef: n
-                        }, a.createElement("button", null, "DELETE ", "COMMENT")), a.createElement(r, {
+                        }, a.createElement("button", null, "ИЗТРИЙ ", "КОМЕНТАР")), a.createElement(r, {
                             contentRef: n
                         }, a.createElement(F.PopupMain, null, a.createElement("div", {
                                     className: "popup-message"
                                 }, a.createElement("span", {
                                         className: "popup-message-title"
-                                    }, K, " removal"), a.createElement("span", {
+                                    }, "Премахване на ", K), a.createElement("span", {
                                         className: "popup-message-main"
-                                    }, "You're willing to remove ", J, " permanently?")), a.createElement("hr", null), a.createElement("span", {
+                                    }, "Искаш ли да премахнеш ", J, " завинаги?")), a.createElement("hr", null), a.createElement("span", {
                                     className: "popup-message-bottom"
                                 }, a.createElement("button", {
                                         className: "button-link cancel-comment-removal",
                                         onClick: function () {
                                             n.current.toggle()
                                         }
-                                    }, "CANCEL"), a.createElement("button", {
+                                    }, "НЕ"), a.createElement("button", {
                                         className: "button-link proceed-comment-removal",
                                         onClick: function () {
                                             n.current.toggle(),
                                             f.MediaPageActions.deleteComment(e.comment_id)
                                         }
-                                    }, "PROCEED"))))) : null)
+                                    }, "ДА"))))) : null)
             }
             function ne(e) {
                 var t,
@@ -1402,7 +1402,7 @@
                 var t = e.commentsLength;
                 return a.createElement(a.Fragment, null, !i.MemberContext._currentValue.can.readComment || o.MediaPageStore.get("media-data").enable_comments ? null : a.createElement("span", {
                         className: "disabled-comments-msg"
-                    }, "Comments are disabled"), i.MemberContext._currentValue.can.readComment && (o.MediaPageStore.get("media-data").enable_comments || i.MemberContext._currentValue.can.editMedia) ? a.createElement("h2", null, t ? 1 < t ? t + " Comments" : t + " " + K : o.MediaPageStore.get("media-data").enable_comments ? "No comment yet" : "") : null)
+                    }, "Коментарите са изключени."), i.MemberContext._currentValue.can.readComment && (o.MediaPageStore.get("media-data").enable_comments || i.MemberContext._currentValue.can.editMedia) ? a.createElement("h2", null, t ? 1 < t ? t + " коментара" : t + " " + K : o.MediaPageStore.get("media-data").enable_comments ? "Все още никой не е коментирал. Бъди пръв!" : "") : null)
             };
             function ae(e) {
                 var t = Y((0, a.useState)(o.MediaPageStore.get("media-id")), 2),
@@ -1420,23 +1420,23 @@
                 function p(e) {
                     m(),
                     setTimeout((function () {
-                            return f.PageActions.addNotification("Comment added", "commentSubmit")
+                            return f.PageActions.addNotification("Коментарът е добавен!", "commentSubmit")
                         }), 100)
                 }
                 function y() {
                     setTimeout((function () {
-                            return f.PageActions.addNotification("Comment submition failed", "commentSubmitFail")
+                            return f.PageActions.addNotification("Коментирането неуспешно!", "commentSubmitFail")
                         }), 100)
                 }
                 function h(e) {
                     m(),
                     setTimeout((function () {
-                            return f.PageActions.addNotification("Comment removed", "commentDelete")
+                            return f.PageActions.addNotification("Коментарът е премахнат!", "commentDelete")
                         }), 100)
                 }
                 function g(e) {
                     setTimeout((function () {
-                            return f.PageActions.addNotification("Comment removal failed", "commentDeleteFail")
+                            return f.PageActions.addNotification("Премахването на коментара е неуспешно!", "commentDeleteFail")
                         }), 100)
                 }
                 return (0, a.useEffect)((function () {
@@ -1584,9 +1584,9 @@
                 a.createElement("a", {
                     href: t,
                     rel: "nofollow",
-                    title: "Edit media",
+                    title: "Редактирай Видео",
                     className: "edit-media"
-                }, "EDIT MEDIA")
+                }, "РЕДАКТИРАЙ ВИДЕО")
             }
             function me(e) {
                 var t = e.link;
@@ -1596,7 +1596,7 @@
                     rel: "nofollow",
                     title: "Edit subtitle",
                     className: "edit-subtitle"
-                }, "EDIT SUBTITLE")
+                }, "ДОБАВИ СУБТИТРИ")
             }
             function fe(e) {
                 var t = (0, B.useUser)().userCan,
@@ -1664,13 +1664,13 @@
                                 onClick: function () {
                                     b(!v)
                                 }
-                            }, v ? "SHOW LESS" : "SHOW MORE") : null, r.length ? a.createElement(ce, {
+                            }, v ? "SHOW LESS" : "ПОКАЖИ ОЩЕ") : null, r.length ? a.createElement(ce, {
                                 value: r,
-                                title: 1 < r.length ? "Tags" : "Tag",
+                                title: 1 < r.length ? "Тагове" : "Таг",
                                 id: "tags"
                             }) : null, l.length ? a.createElement(ce, {
                                 value: l,
-                                title: 1 < l.length ? "Categories" : "Category",
+                                title: 1 < l.length ? "Категории" : "Категория",
                                 id: "categories"
                             }) : null, t.editMedia || t.editSubtitle || t.deleteMedia ? a.createElement("div", {
                                 className: "media-author-actions"
@@ -1682,7 +1682,7 @@
                                     contentRef: c
                                 }, a.createElement("button", {
                                         className: "remove-media"
-                                    }, "DELETE MEDIA")), a.createElement(d, {
+                                    }, "ИЗТРИЙ ВИДЕОТО")), a.createElement(d, {
                                     contentRef: c
                                 }, a.createElement(F.PopupMain, null, a.createElement("div", {
                                             className: "popup-message"
@@ -2002,7 +2002,7 @@
                                 var n = i.current.value.trim();
                                 "" !== n && (t.preventDefault(), void 0 !== e.submitReportForm && e.submitReportForm(n))
                             }
-                        }, "SUBMIT")))
+                        }, "КОМЕНТИРАЙ")))
             }
             function Ee(e, t) {
                 return function (e) {
@@ -2094,7 +2094,7 @@
                     l = t.reported_times;
                     return n && e.downloadMedia && (o ? i.push({
                             itemType: "open-subpage",
-                            text: "Download",
+                            text: "Свали",
                             icon: "arrow_downward",
                             itemAttr: {
                                 className: "visible-only-in-small"
@@ -2106,7 +2106,7 @@
                         }) : r && i.push({
                             itemType: "link",
                             link: r,
-                            text: "Download",
+                            text: "Свали",
                             icon: "arrow_downward",
                             itemAttr: {
                                 className: "visible-only-in-small"
@@ -2118,7 +2118,7 @@
                         })),
                     o && e.editMedia && i.push({
                         itemType: "open-subpage",
-                        text: "Status info",
+                        text: "Статус",
                         icon: "info",
                         buttonAttr: {
                             className: "change-page",
@@ -2163,7 +2163,7 @@
                         className: "main-options"
                     }, a.createElement(F.PopupMain, null, a.createElement("ul", {
                                     className: "media-status-info"
-                                }, a.createElement("li", null, "Media type: ", a.createElement("span", null, u)), a.createElement("li", null, "State: ", a.createElement("span", null, c)), a.createElement("li", null, "Review state: ", a.createElement("span", null, f ? "Is reviewed" : "Pending review")), p ? a.createElement("li", null, "Encoding Status: ", a.createElement("span", null, d)) : null, m ? a.createElement("li", {
+                                }, a.createElement("li", null, "Вид медия: ", a.createElement("span", null, u)), a.createElement("li", null, "Достъпност: ", a.createElement("span", null, c)), a.createElement("li", null, "Одобрен: ", a.createElement("span", null, f ? "Преглежда се" : "Изчаква преглеждане")), p ? a.createElement("li", null, "Статус на обработка: ", a.createElement("span", null, d)) : null, m ? a.createElement("li", {
                                         className: "reports"
                                     }, "Reports: ", a.createElement("span", null, m)) : null)))),
                 n && e.downloadMedia && p && (h.videoDownloadOptions = a.createElement("div", {
@@ -2512,7 +2512,7 @@
                                 type: "span"
                             }, a.createElement(F.MaterialIcon, {
                                     type: "playlist_add"
-                                })), a.createElement("span", null, "SAVE"))), a.createElement(i, {
+                                })), a.createElement("span", null, "ЗАПАЗИ"))), a.createElement(i, {
                         contentRef: r
                     }, a.createElement(F.NavigationContentApp, {
                             initPage: s,
@@ -3255,7 +3255,7 @@
                                 type: "span"
                             }, a.createElement(F.MaterialIcon, {
                                     type: "share"
-                                })), a.createElement("span", null, "SHARE"))), a.createElement(i, {
+                                })), a.createElement("span", null, "СПОДЕЛИ"))), a.createElement(i, {
                         contentRef: r,
                         hideCallback: function () {
                             u("shareOptions")
@@ -3288,13 +3288,13 @@
                         href: e.link,
                         target: "_blank",
                         download: e.title,
-                        title: "Download",
+                        title: "Свали видеото",
                         rel: "noreferrer"
                     }, a.createElement(F.CircleIconButton, {
                             type: "span"
                         }, a.createElement(F.MaterialIcon, {
                                 type: "arrow_downward"
-                            })), a.createElement("span", null, "DOWNLOAD")))
+                            })), a.createElement("span", null, "СВАЛИ")))
             }
             function et(e, t) {
                 return function (e) {
@@ -3388,7 +3388,7 @@
                                 type: "span"
                             }, a.createElement(F.MaterialIcon, {
                                     type: "arrow_downward"
-                                })), a.createElement("span", null, "DOWNLOAD"))), a.createElement("div", {
+                                })), a.createElement("span", null, "СВАЛИ"))), a.createElement("div", {
                         className: "nav-page-" + l
                     }, a.createElement(r, {
                             contentRef: n
@@ -3735,7 +3735,7 @@
                                         className: "media-views-actions" + (this.state.likedMedia ? " liked-media" : "") + (this.state.dislikedMedia ? " disliked-media" : "")
                                     }, !e && o.PageStore.get("config-options").pages.media.categoriesWithTitle ? this.mediaCategories() : null, e ? a.createElement("div", {
                                             className: "media-views"
-                                        }, (0, m.formatViewsNumber)(this.props.views, !0), " ", 1 >= this.props.views ? "view" : "views") : null, a.createElement("div", {
+                                        }, (0, m.formatViewsNumber)(this.props.views, !0), " ", 1 >= this.props.views ? "гледане" : "гледания") : null, a.createElement("div", {
                                             className: "media-actions"
                                         }, a.createElement("div", null, i.MemberContext._currentValue.can.likeMedia ? a.createElement(be, null) : null, i.MemberContext._currentValue.can.dislikeMedia ? a.createElement(he, null) : null, i.MemberContext._currentValue.can.shareMedia ? a.createElement(Ke, {
                                                     isVideo: !0
@@ -4202,7 +4202,7 @@
                         className: "auto-play-header"
                     }, a.createElement("div", {
                             className: "next-label"
-                        }, "Up next"), a.createElement("div", {
+                        }, "Следва"), a.createElement("div", {
                             className: "auto-play-option"
                         }, a.createElement("label", {
                                 className: "checkbox-label right-selectbox",
@@ -4210,7 +4210,7 @@
                                 onKeyPress: function (e) {
                                     0 === e.keyCode && f.PageActions.toggleMediaAutoPlay()
                                 }
-                            }, "AUTOPLAY", a.createElement("span", {
+                            }, "АВТОСТАРТ", a.createElement("span", {
                                     className: "checkbox-switcher-wrap"
                                 }, a.createElement("span", {
                                         className: "checkbox-switcher"
@@ -4536,7 +4536,7 @@
                                         }, a.createElement(F.CircleIconButton, {
                                                 className: this.state.loopRepeat ? "active" : "",
                                                 onClick: this.onLoopClick,
-                                                title: "Loop playlist"
+                                                title: "Повтори плейлиста"
                                             }, a.createElement("i", {
                                                     className: "material-icons"
                                                 }, "repeat"))) : null, this.state.expanded && this.state.items.length ? a.createElement("div", {
